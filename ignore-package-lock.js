@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Remove package-lock from bitbucket
 // @namespace    http://tampermonkey.net/
-// @version      0.1.6
+// @version      0.1.7
 // @description  try to take over the world!
 // @author       Daffodil
 // @match        https://bitbucket.org/*
@@ -12,7 +12,7 @@
 (function() {
     'use strict';
     const showPackageLock = () => {
-        if ($('section[data-path="package-lock.json"]').css('display') !== 'none') {
+        if ($('section[data-path="package-lock.json"]').css('display') === 'none') {
             $('section[data-path="package-lock.json"]').css('display', 'unset');
         } else {
             $('section[data-path="package-lock.json"]').css('display', 'none' );
