@@ -14,7 +14,7 @@
     const showPackageLock = () => {
         console.log(window.packageLock);
         $('section[data-path="package-lock.json"]').css('display', 'unset');
-        $('button[class="execute click aui-button aui-button-light sbs package-lock"]').css('display', 'none' );
+        $('button[class="execute click aui-button aui-button-light sbs package-lock"]').remove();
     };
     window.showPackageLock = showPackageLock;
     let element;
