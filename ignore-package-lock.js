@@ -12,17 +12,13 @@
 (function() {
     'use strict';
     const showPackageLock = () => {
-        console.log(window.packageLock);
         $('section[data-path="package-lock.json"]').css('display', 'unset');
         $('section[class="iterable-item bb-udiff maskable commentable-diff package-lock"] button[class="execute click aui-button aui-button-light sbs package-lock"]').remove();
     };
     window.showPackageLock = showPackageLock;
-    let element;
     let interval = setInterval(() => {
 
          if ($('section[data-path="package-lock.json"]').css('display') !== 'none') {
-             window.packageLock = $('section[data-path="package-lock.json"]');
-             console.log('element detected', $('section[data-path="package-lock.json"]'));
              $('section[data-path="package-lock.json"]').css('display', 'none' );
              $('section[data-path="package-lock.json"]').after('<section class="iterable-item bb-udiff maskable commentable-diff package-lock"><button onClick="window.showPackageLock()" class="execute click aui-button aui-button-light sbs package-lock">Show package-lock.json</button><section>');
          } else {
