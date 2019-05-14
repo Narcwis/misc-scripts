@@ -19,5 +19,5 @@
          } else {
              clearInterval(interval);
          }
-    }, 300);
+    }, 1000);
 })();
