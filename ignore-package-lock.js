@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Remove package-lock from bitbucket
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.1.1
 // @description  try to take over the world!
 // @author       Daffodil
 // @match        https://bitbucket.org/*
