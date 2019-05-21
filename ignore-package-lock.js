@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         Remove package-lock from bitbucket
 // @namespace    http://tampermonkey.net/
-// @version      0.1.11
-// @description  try to take over the world!
+// @version      0.1.12
+// @description  Will collapse package-lock.json
 // @author       Daffodil
 // @match        https://bitbucket.org/*
 // @grant        none
@@ -24,6 +24,6 @@
 
     waitForEl('article[aria-label="Diff of file package-lock.json"] > div > div[class*="rah-static rah-static--height-auto"]', function() {
         $('article[aria-label="Diff of file package-lock.json"] > div > div[data-qa="bk-file__header"]').click();
-        console.log('package-loc.json should be collapsed');
+        console.log('package-lock.json should be collapsed');
     });
 })();
