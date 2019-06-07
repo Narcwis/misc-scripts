@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clicker Auto
 // @namespace    https://github.com/Narcwis/misc-scripts/blob/master/cookie.js
-// @version      0.0.5
+// @version      0.0.6
 // @description  try to take over the world!
 // @author       You
 // @match        https://orteil.dashnet.org/cookieclicker/
@@ -14,7 +14,7 @@
     setInterval(()=> {
     const toClick = $('div[class*="enabled"]');
     Object.keys(toClick).forEach((key) => {
-        if (toClick[key] !== toClick[Object.keys(toClick)[0]]) {
+        if (toClick[key] === toClick[Object.keys(toClick)[Object.keys(toClick).length]]) {
             toClick[key].click();
         }
     })
