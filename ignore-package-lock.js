@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Hide package-lock contents from bitbucket
-// @namespace    http://tampermonkey.net/
-// @version      0.1.13
+// @namespace    https://github.com/Narcwis/misc-scripts/blob/master/ignore-package-lock.js
+// @version      0.1.14
 // @description  Will collapse package-lock.json and add a button to toggle the changes visibility
 // @author       Daffodil
 // @match        https://bitbucket.org/*
