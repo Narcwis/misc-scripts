@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clicker Auto
 // @namespace    https://github.com/Narcwis/misc-scripts/blob/master/cookie.js
-// @version      0.0.7
+// @version      0.0.8
 // @description  try to take over the world!
 // @author       You
 // @match        https://orteil.dashnet.org/cookieclicker/
@@ -11,12 +11,26 @@
 
 (function() {
     'use strict';
+    const sleep = (time) => {
+        return new Promise((resolve) => setTimeout(resolve, time));
+    }
+    const clickStuff = (toClick) => {
+        Object.keys(toClick).forEach((key) => {
+            if (toClick[key] === toClick[Object.keys(toClick)[Object.keys(toClick).length - 3]]) {
+                toClick[key].click();
+                sleep(300).then(() => {
+                    toClick[key].click();
+                    sleep(300).then(()=> {
+                        toClick[key].click();
+                    });
+                });
+            }
+        });
+    };
     setInterval(()=> {
-    const toClick = $('div[class*="enabled"]');
-    Object.keys(toClick).forEach((key) => {
-        if (toClick[key] === toClick[Object.keys(toClick)[Object.keys(toClick).length - 1]]) {
-            toClick[key].click();
-        }
-    })
-    }, 500);
+        const productsToClick = $('div[class*="product unlocked enabled"]');
+        const upgradesToClick = $('div[class*="crate upgrade enabled"]');
+        clickStuff(productsToClick);
+        clickStuff(upgradesToClick);
+    }, 5000);
 })();
