@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clicker Auto
 // @namespace    http://tampermonkey.net/
-// @version      0.0.2
+// @version      0.0.3
 // @description  try to take over the world!
 // @author       You
 // @match        https://orteil.dashnet.org/cookieclicker/
@@ -12,11 +12,12 @@
 (function() {
     'use strict';
     setInterval(()=> {
+    $('div[id="bigCookie"]').click();
     const toClick = $('div[class*="enabled"]');
     Object.keys(toClick).forEach((key) => {
         if (toClick[key] !== toClick[Object.keys(toClick)[0]]) {
             toClick[key].click();
         }
     })
-    }, 1000);
+    }, 300);
 })();
