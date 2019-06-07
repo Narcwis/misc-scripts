@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clicker Auto
 // @namespace    http://tampermonkey.net/
-// @version      0.0.1
+// @version      0.0.2
 // @description  try to take over the world!
 // @author       You
 // @match        https://orteil.dashnet.org/cookieclicker/
@@ -15,8 +15,6 @@
     const toClick = $('div[class*="enabled"]');
     Object.keys(toClick).forEach((key) => {
         if (toClick[key] !== toClick[Object.keys(toClick)[0]]) {
-            console.log('clicked');
-            console.log(toClick);
             toClick[key].click();
         }
     })
