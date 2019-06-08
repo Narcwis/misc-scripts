@@ -32,5 +32,5 @@
         const upgradesToClick = $('div[class*="crate upgrade enabled"]');
         clickStuff(productsToClick);
         clickStuff(upgradesToClick);
-    }, 5000);
+    }, 30000);
 })();
