@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clicker Auto
 // @namespace    https://github.com/Narcwis/misc-scripts/blob/master/cookie.js
-// @version      0.0.15
+// @version      0.0.16
 // @description  try to take over the world!
 // @author       You
 // @match        https://orteil.dashnet.org/cookieclicker/
