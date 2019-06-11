@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clicker Auto
 // @namespace    https://github.com/Narcwis/misc-scripts/blob/master/cookie.js
-// @version      0.0.14
+// @version      0.0.15
 // @description  try to take over the world!
 // @author       You
 // @match        https://orteil.dashnet.org/cookieclicker/
@@ -16,7 +16,7 @@
     }
     const clickStuff = (toClick) => {
         Object.keys(toClick).forEach((key) => {
-            if (toClick[key] === toClick[Object.keys(toClick)[Object.keys(toClick).length - 3]] && key > Object.keys(toClick)[Object.keys(toClick).length - 10]) {
+            if (toClick[key] === toClick[Object.keys(toClick)[Object.keys(toClick).length - 3]]) {
                 toClick[key].click();
                 sleep(300).then(() => {
                     toClick[key].click();
