@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Clicker Auto
 // @namespace    https://github.com/Narcwis/misc-scripts/blob/master/cookie.js
-// @version      0.0.16
+// @version      0.0.18
 // @description  try to take over the world!
 // @author       You
 // @match        https://orteil.dashnet.org/cookieclicker/
@@ -27,10 +27,12 @@
             }
         });
     };
+    window.cookieTimer = 600000;
     setInterval(()=> {
+        window.cookieTimer += 20000;
         const productsToClick = $('div[class*="product unlocked enabled"]');
         const upgradesToClick = $('div[class*="crate upgrade enabled"]');
         clickStuff(upgradesToClick);
         clickStuff(productsToClick);
-    }, 300000);
+    }, window.cookieTimer);
 })();
