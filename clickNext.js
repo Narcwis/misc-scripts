@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Click next 3s netflix
-// @namespace    http://tampermonkey.net/
+// @namespace    https://github.com/Narcwis/misc-scripts/blob/master/clickNext.js
 // @version      0.1
 // @description  try to take over the world!
-// @author       You
+// @author       Narcwis
 // @match        https://www.netflix.com/watch/*
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
 // @grant        none
