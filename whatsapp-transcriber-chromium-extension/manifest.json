@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "WhatsApp Voice Transcriber",
+    "version": "0.33",
+    "description": "Transcribe WhatsApp Web voice messages using AssemblyAI.",
+    "permissions": [
+        "storage"
+    ],
+    "host_permissions": [
+        "https://api.assemblyai.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://web.whatsapp.com/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "inject.js"
+            ],
+            "matches": [
+                "https://web.whatsapp.com/*"
+            ]
+        }
+    ],
+    "options_page": "options.html"
+}
